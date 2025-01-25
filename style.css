@@ -1,33 +1,35 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
-.hero{
+.hero {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(45deg, #010758, #490d61);    display: flex;
+    background: linear-gradient(45deg, #010758, #490d61);
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     color: #fff;
-
+    padding: 20px;
 }
 
-.hero h1{
+.hero h1 {
     font-size: 45px;
     font-weight: 500;
     margin-top: -50px;
     margin-bottom: 50px;
+    text-align: center;
 }
-.hero h1 span{
+
+.hero h1 span {
     color: #ff2963;
-
 }
 
-textarea{
+textarea {
     width: 100%;
     height: 250px;
     background-color: #403d84;
@@ -41,19 +43,21 @@ textarea{
     margin-bottom: 30px;
 }
 
-textarea::placeholder{
+textarea::placeholder {
     font-size: 16px;
     color: #ddd;
 }
 
-.row{
-    width: 600px;
+.row {
+    width: 100%;
+    max-width: 600px;
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
-button{
+button {
     background-color: #ff2963;
     color: #fff;
     font-size: 16px;
@@ -66,12 +70,12 @@ button{
     align-items: center;
 }
 
-button img{
+button img {
     width: 16px;
     margin-right: 10px;
 }
 
-select{
+select {
     flex: 1;
     color: #fff;
     background-color: #403d84;
@@ -86,4 +90,44 @@ select{
     background-size: 15px;
     background-position-x: calc(100% - 20px);
     background-position-y: calc(20px);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    textarea {
+        height: 200px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    select {
+        height: 45px;
+    }
 }
